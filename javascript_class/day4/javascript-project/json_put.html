@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // title: 제일 싫어하는 색상, author: 좋아하는 저자
+        // fetch API로 기존 데이터 수정, id: 2
+        // 헤더 json, utf8
+
+        fetch("http://localhost:3000/posts/2", {
+            method: "PUT",
+            body: JSON.stringify({
+                title: "RED",
+                author: "장영희"
+            }),
+            headers: {"content-type": "application/json; charset=UTF-8"}
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+    </script>
+</body>
+</html>

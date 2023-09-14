@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "칵테일, 러브, 좀비",
+      "author": "조예은"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "title": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

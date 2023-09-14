@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = "";
+        try {
+            if (x == "") throw "empty";
+            var y = x + 3;
+            console.log(y);
+        } catch (err) {
+            console.log(`x is ${err}`);
+        } finally {
+            console.log("try/catch문 마지막에서 항상 실행");
+        }
+    </script>
+</body>
+</html>

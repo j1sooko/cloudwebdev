@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // title: 좋아하는 책 제목, author: 저자 이름
+        // fetch API 사용, 콘솔로 결과 출력
+        // 헤더 json, utf8
+
+        fetch("http://localhost:3000/posts", {
+            method: "POST",
+            body: JSON.stringify({
+                id: 3,
+                title: "칵테일, 러브, 좀비",
+                author: "조예은"
+            }),
+            headers: {"content-type": "application/json; charset=UTF-8"}
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+    </script>
+</body>
+</html>

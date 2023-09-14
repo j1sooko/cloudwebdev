@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(modelName, modelYear, type, price) {
+                this.modelName = modelName;
+                this.modelYear = modelYear;
+                this.type = type;
+                this.price = price;
+            }
+
+            getModelName() {
+                return this.modelName;
+            }
+
+            getModelYear() {
+                return this.modelYear;
+            }
+
+            getType() {
+                return this.type;
+            }
+
+            getPrice() {
+                return this.price;
+            }
+
+            setModelName(modelName) {
+                this.modelName = modelName;
+            }
+
+            setModelYear(modelYear) {
+                this.modelYear = modelYear;
+            }
+
+            setType(type) {
+                this.type = type;
+            }
+
+            setPrice(price) {
+                this.price = price;
+            }
+        }
+
+        let car = new Car("model3", "2023", "e", "4000");
+
+        car.setPrice(4300);
+        console.log(car.getModelName());
+        console.log(car.getModelYear());
+        console.log(car.getPrice());
+
+        class ElectricCar extends Car {
+            constructor(modelName, modelYear, price, chargeTime) {
+                super(modelName, modelYear, "e", price)
+                this.chargeTime = chargeTime;
+            }
+            setChargeTime(chargeTime) {
+                this.chargeTime = chargeTime;
+            }
+
+            getChargeTime() {
+                return this.chargeTime;
+            }
+        }
+
+        let ecar = new ElectricCar("iconic6", "2022", 5000, 60);
+        ecar.setChargeTime(40);
+        console.log(ecar.getModelName());
+        console.log(ecar.getChargeTime());
+        console.log(ecar.getModelYear());
+    </script>
+</body>
+</html>

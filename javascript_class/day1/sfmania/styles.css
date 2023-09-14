@@ -1,0 +1,74 @@
+/* 1. 주메뉴 배치 스타일 */
+.header ul {
+  list-style-type: none;
+  border: 1px solid lightgray;
+  background: #ffffff;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+.header li {
+  float: left;
+}
+
+.header li:last-child {
+  float: right;
+}
+
+/* 2.주메뉴 링크 스타일 */
+.header li > a {
+  display: inline-block;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+.header li > a.active {
+  color: white;
+  background-color: skyblue;
+}
+
+.header li > a:hover:not(.active) {
+  background-color: lightgrey;
+}
+
+/* 3. 하위 메뉴 스타일 */
+
+.header .dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+
+  /* position: relative; */
+}
+
+.header .dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.header .dropdown_content > a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  padding: 12ps 16px;
+}
+
+.header .dropdown_content > a:hover {
+  background-color: lightgreen;
+  color: white;
+}
+
+/* 4.로그인 하위 메뉴 스타일 */
+.header .dropdown_content > input {
+  width: 100;
+  color: black;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  padding: 12px 30px;
+}

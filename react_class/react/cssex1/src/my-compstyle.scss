@@ -1,0 +1,21 @@
+$primaryColor: white;
+$secondaryColor: #00b0ff;
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+
+    .tealTopBottom {
+        background-color: teal;
+        color: $primaryColor;
+        font-size: 32px;
+    }
+
+    .grayMain {
+        background-color: $secondaryColor;
+        color: $primaryColor;
+        font-size: 36px;
+    }
+}

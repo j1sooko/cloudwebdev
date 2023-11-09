@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JSON 예제</h2>
+    <div id="intro"></div>
+    <script>
+        window.onload = function () {
+            var json_with_Array = {
+                "student_id" : "20210123",
+                "name" : "체르니",
+                "isStudent" : true,
+                "scores" : [ 85, 90, 87 ]
+            };
+
+            var div_el = document.getElementById('intro');
+            div_el.innerText = "체르니의 첫 번째 과목 점수 : " + json_with_Array.scores[0] +
+                                "\t, 체르니의 두 번째 과목 점수 : " + json_with_Array.scores[1];
+        }
+    </script>
+</body>
+</html>

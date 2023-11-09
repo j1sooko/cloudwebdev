@@ -1,0 +1,27 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul { display: inline-block; }
+
+.imgcontainer {
+    margin: 0 0 5px 10px;
+}
+
+.imgcontainer img {
+    float: left;
+}
+
+.imgcontainer div {
+    display: inline;
+    margin-left: 10px;
+}
+
+.imgcontainer::after {
+    content: '';
+    display: block;
+    clear: both;
+}

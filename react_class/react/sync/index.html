@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- setTimeout 사용 -->
+    <!-- <script>
+        // function goto_Seoul() { document.write('서울 여행')}
+
+        function goto_Seoul() {
+            for (let i = 0; i < 100; i++) {
+                document.write('서울 강의 여행 중 ... ' + '<br />')
+            }
+        }
+
+        // function goto_NewYork() { document.write('뉴욕 여행')}
+        function goto_NewYork() {
+            setTimeout(() => { document.write('뉴욕 여행')}, 5000)
+        }
+        function goto_Seattle() { document.write('시애틀의 잠 못 이루는 밤')}
+
+        goto_Seoul();
+        document.write('<br />' + '부산으로 놀러오세요.' + '<br />')
+        goto_NewYork();
+        document.write('<br />' + '시카고의 미시간호는 바다처럼 넓어요.' + '<br />')
+        goto_Seattle();
+    </script> -->
+
+    <!-- promise 사용 -->
+    <!-- <script>
+        const attendOrNot = true; // 참석 여부
+        const place = new Promise(function(resolve, rejcet) {
+            if (attendOrNot) {
+                const placeDetails = {
+                    name: '경복궁',
+                    location: '서울',
+                    time: '12:00'
+                };
+                resolve(placeDetails);
+            } else {
+                rejcet(Error("나는 다른 약속이 있어서 그 시간에 경복궁에 갈 수 없다."));
+            }
+        })
+
+        console.log(place);
+    </script>
+ -->
+
+    <!-- promise 완료 후 처리 -->
+   <!--  <script>
+        const attendOrNot = false; // 참석 여부
+        const place = new Promise(function(resolve, rejcet) {
+            if (attendOrNot) {
+                const placeDetails = {
+                    name: '경복궁',
+                    location: '서울',
+                    time: '12:00'
+                };
+                resolve(placeDetails);
+            } else {
+                rejcet(Error("나는 다른 약속이 있어서 그 시간에 경복궁에 갈 수 없다."));
+            }
+        })
+
+        // console.log(place);
+
+        // place.then( function(data) { console.log(data)}, // resolve의 경우
+        //             function(reason) { console.log(reason); }); // reject의 경우
+
+        place.then( function(data) { console.log(data); })
+        .catch(function(reason) {console.log(reason);}); // 다른 error도 잡을 수 있음
+    </script> -->
+
+    <!-- promise chaining -->
+    <!-- 비동기처리를 순차적으로 동기처리처럼 하고 싶을 때 -->
+    <!-- <script>
+        const p_chanining = new Promise((resolve, reject) => {
+            let score = 100;
+            setTimeout(() => { resolve(score); }, 4000);
+        });
+
+        p_chanining.then( (result) => {
+            let penalty = 1;
+            console.log(result);
+            console.log("학생들은 수업에 지각했다.");
+            return result - penalty;
+        }).then( (result) => {
+            console.log(result);
+            console.log("학생들이 과제 제출을 늦게했다.");
+            return result - 5;
+        }).then( (result) => { console.log(result);})
+    </script> -->
+
+    <!-- Async: 함수 앞에 붙이면 함수의 return 값은 항상 promise -->
+<!--     <script>
+        function func() {
+            let score = 95;
+            return score; 
+        }
+        async function asyncFunc() {
+            let score = 95;
+            return score;
+        }
+
+        console.log(func()); // 95
+        console.log(asyncFunc()); // Promise
+        asyncFunc().then(result => {console.log(result); }) //95
+
+    </script> -->
+
+    <!-- await는 promise가 정상적으로 처리가 되어 결과값이 넘어올 때까지 기다리도록 할 때 사용 -->
+<script>
+    async function asyncFunc() {
+        let count = 97;
+        
+        let p_Count = new Promise( (resolve, reject) => {
+            setTimeout( () => {resolve(count)}, 3000);
+        });
+        
+        let result = await p_Count; // await 사용 안 하면 pending 상태로 넘어옴
+        console.log(result);
+    }
+
+    asyncFunc();
+
+</script>
+</body>
+</html>

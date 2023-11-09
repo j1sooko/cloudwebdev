@@ -1,0 +1,11 @@
+.container {
+    width: 95%;
+    margin: 0 auto;
+    background-color: teal;
+    color: white;
+}
+
+.heading {
+    color: violet;
+    padding: 1rem;
+}

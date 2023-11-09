@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  const clients = ['김창수', '이재원', '김은아'];
+        const [client1, client2, client3] = clients;
+        console.log(client1, client2, client3);
+        console.log(client1, client3, client2);
+
+        const student = {name:'체르니', age:35}
+        const {name:studentName, age:studentAge} = student;
+        console.log(studentName, studentAge); */
+
+        const cities1 = ['서울', '인천', '부산'];
+        const cities2 = ['대전', '대구', '춘천', '광주'];
+        const city = '전주';
+
+        //  concat()을 이용한 방법
+        cities_all1 = cities1.concat(cities2);
+        console.log('cities_all1', cities_all1);
+
+        //  spread을 이용한 방법
+        cities_all2 = [...cities1, ...cities2];
+        console.log('cities_all2', cities_all2);
+
+        cities_all3 = [...cities2, ...cities1];
+        console.log('cities_all3', cities_all3);
+
+        cities_add_one = [...cities1, city];
+        console.log('cities_add_one', cities_add_one);
+
+
+    </script>
+</body>
+</html>

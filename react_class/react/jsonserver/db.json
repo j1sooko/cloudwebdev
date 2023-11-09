@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "이재원",
+      "email": "jwlee@google.com"
+    },
+    {
+      "id": 3,
+      "name": "김은하",
+      "email": "ehkim@naver.com"
+    },
+    {
+      "id": 4,
+      "name": "고지수",
+      "email": "wltn7234@naver.com"
+    }
+  ]
+}
